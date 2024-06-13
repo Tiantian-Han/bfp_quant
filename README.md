@@ -1,6 +1,6 @@
 # Neural Network Training with MX-Compatible Formats
 
-This repository includes Jupyter notebooks showcasing the integration of the MX PyTorch Emulation Library for quantization of ML Models
+This repository includes Jupyter notebooks showcasing the integration of the MX PyTorch Emulation Library for quantization of ML Models.
 
 ## Overview of Notebooks
 
@@ -30,10 +30,15 @@ Each notebook in this repository demonstrates different aspects of training and 
 - Utility notebook for tensor quantization using the MX library.
 - Demonstrates the process of converting tensors to MX-compatible and bfloat formats.
 
+### ResNet18 BFP.ipynb
+
+This notebook explores the application of Block Floating Point (BFP) quantization To ResNet18.
+- Implementation of `BFPLinear`, a custom linear layer that applies BFP quantization to its weights and biases.
+- A `BFPModelWrapper` class that enables dynamic switching between full precision and quantized states of a model, making it suitable for scenarios where precision trade-offs can be managed dynamically based on runtime performance metrics.
 
 ## Getting Started
 
 To set up the repository for running these notebooks:
 
-1. Follow instructions on installing the [Microxcaling library](https://github.com/microsoft/microxcaling)
+1. Follow instructions on installing the [Microxcaling library](https://github.com/microsoft/microxcaling).
 2. Install Python dependencies listed in `requirements.txt`.
